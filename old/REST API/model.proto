@@ -1,0 +1,16 @@
+//Define the version of proto
+syntax = "proto3";
+
+
+message Input {
+  string input_message = 1;
+}
+
+message OutputMessage {
+  string output_message = 1;
+}
+
+
+service Predict {
+  rpc LoadForecasting(Input) returns (OutputMessage);
+}
